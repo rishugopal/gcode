@@ -2,6 +2,7 @@ var req;
 var active;
 function onFoucsTextField(name)
 {
+	console.log("Processing javascript");
 	if(window.XMLHttpRequest)
 		{
 		req=new XMLHttpRequest();
