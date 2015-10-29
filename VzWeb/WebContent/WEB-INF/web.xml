@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Chat</display-name>
+    <servlet-name>Chat</servlet-name>
+    <servlet-class>com.controller.Chat</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Chat</servlet-name>
+    <url-pattern>/Chat</url-pattern>
+  </servlet-mapping>
 </web-app>
