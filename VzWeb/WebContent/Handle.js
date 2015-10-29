@@ -1,6 +1,8 @@
 var req;
+var active;
 function onFoucsTextField(name)
 {
+	console.log("Processing javascript");
 	if(window.XMLHttpRequest)
 		{
 		req=new XMLHttpRequest();
@@ -9,7 +11,9 @@ function onFoucsTextField(name)
 		{
 		req=new ActiveXObject("Microsoft.XMLHTTP");
 		}
+	//active=document.activeElement.name;
 	var url="SuggestServlet?name="+name;
+	
 	req.onreadystatechange=getResponse;
 	req.open("GET",url,true);
 	req.send(null);

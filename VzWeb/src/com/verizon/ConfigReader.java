@@ -27,9 +27,12 @@ public class ConfigReader {
 	        // Try loading properties from the file (if found)
 	        props.load( is );
 	    }
-	    catch ( Exception e ) { }
+	    catch ( Exception e ) { 
+	    	
+	    	e.printStackTrace();
+	    	}
 	 
-	    String videoURL = props.getProperty("elementID", "NoResource");
+	    String videoURL = props.getProperty(elementID, "NoResource");
 	    return videoURL;
 	}
 
