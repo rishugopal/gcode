@@ -1,0 +1,82 @@
+set BEA_HOME=D:\bea12.1.2
+set JAVA_HOME=C:\program files\Java\jdk1.8.0_45
+set JAVA_OPTS=-Xms512m -Xmx1024m -XX:MaxPermSize=256m
+set M2_HOME=D:\my_workspace\gch\accurev_work\maven_3.1.1\apache-maven-3.1.1
+set M2=%M2_HOME%\bin
+set MAVEN_OPTS=-Xms512m
+set PATH=%PATH%;%JAVA_HOME%\bin;%M2%;
+set WL_HOME=%BEA_HOME%\wlserver
+set WEBLOGIC_DIR=%WL_HOME%\server
+
+
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/POM/4.0.0" 
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<localRepository>D:/my_workspace/accu_repository</localRepository>
+    <pluginGroups>
+        <pluginGroup>com.vz.mojos</pluginGroup>
+    </pluginGroups>
+
+    <mirrors>
+        <mirror>
+            <!--This sends everything else to /public -->
+            <id>nexus</id>
+            <mirrorOf>*</mirrorOf>
+            <url>http://gchbuild.ebiz.verizon.com/nexus/content/groups/public</url>
+        </mirror>
+    </mirrors>
+
+    <profiles>
+        <profile>
+            <id>gch</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <pluginRepositories>
+                <pluginRepository>
+                    <id>public</id>
+                    <url>http://gchbuild.ebiz.verizon.com/nexus/content/groups/public</url>
+                    <layout>default</layout>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                    <releases>
+                        <updatePolicy>never</updatePolicy>
+                    </releases>
+                </pluginRepository>
+            </pluginRepositories>
+
+            <repositories>
+                <repository>
+                    <id>public</id>
+                    <url>http://gchbuild.ebiz.verizon.com/nexus/content/groups/public</url>
+                    <releases>
+                        <enabled>true</enabled>
+                    </releases>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+
+            <!--  Properties for WLP domains -->
+            <properties>
+                <!-- The ${user.home} is the standard java system property -->
+                <!-- On windows machines use C:/vz_domains -->
+                <!-- To avoid issues with directories' name with space -->
+                <DOMAIN_HOME>D:/my_workspace/gch/accurev_work</DOMAIN_HOME>
+                <BEA_HOME>D:\bea12.1.2</BEA_HOME>
+                 <WL_HOME>${BEA_HOME}/wlserver</WL_HOME>
+                <!-- Only Applies to GCH environment -->
+                <GCH_USER>kukrebh</GCH_USER>
+            </properties>
+
+        </profile>
+
+    </profiles>
+</settings>
+
