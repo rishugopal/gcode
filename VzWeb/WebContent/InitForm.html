@@ -5,19 +5,31 @@
 <title>Insert title here</title>
 </head>
 <body>
-<center>Enter Your Order </center>
+
+<center>Welcome to VZordering </center>
 <Form>
 <table><tr>
-<td>Enter the name of the product:</td>
-  <td><input type="text" name="prod"></td>
+<td>Enter your VZID:</td>
+  <td><input type="text" name="vzid"></td>
   <br></tr><tr>
-   <td>Enter ther name of the feature:</td>  <td><input type="text" name="feat">
+   <td>Enter your EID:</td>  <td><input type="text" name="eid">
 </td></tr>
 <br> 
 <tr>
 
-<td>Enter the name of the Specification:</td>
-  <td><input type="text" name="spec"></td>
+<td>Enter the Product ID:</td>
+  <td><select>
+  <option value="p001">p001</option>
+   <option value="p002">p002</option>
+   <option value="p003">p003</option>
+   <option value="p004">p004</option>
+   <option value="p005">p005</option>
+   <option value="p006">p006</option>
+   <option value="p007">p007</option>
+   <option value="p008">p008</option>
+   <option value="p009">p009</option>
+   <option value="p0010">p0010</option>
+</select> </td>
   <br></tr>
    <tr><td>Enter the Desired due date:</td>  <td><input type="text" name="dddate"></td>
 <br> </tr><tr>
@@ -28,11 +40,16 @@
 <br> </tr><tr>
 <td>State:</td>
  <td> <input type="text" name="state"></td>
-  <br></tr><tr>
+  </tr><tr>
  <td> Country:</td>  <td><input type="text" name="country"></td>
 <br> </tr>
 </table>
+<div id="product_suggest">
+
+</div>
+<input type="submit" value="submit">
 </Form>
+
 
 </body>
 </html>
