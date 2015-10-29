@@ -32,7 +32,7 @@ public class ConfigReader {
 	    	e.printStackTrace();
 	    	}
 	 
-	    String videoURL = props.getProperty("elementID", "NoResource");
+	    String videoURL = props.getProperty(elementID, "NoResource");
 	    return videoURL;
 	}
 
