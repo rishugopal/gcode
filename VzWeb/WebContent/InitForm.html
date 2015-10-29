@@ -3,6 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+<script src="Handle.js"></script>
 </head>
 <body>
 
@@ -10,9 +11,10 @@
 <Form>
 <table><tr>
 <td>Enter your VZID:</td>
-  <td><input type="text" name="vzid"></td>
-  <br></tr><tr>
-   <td>Enter your EID:</td>  <td><input type="text" name="eid">
+  <td><input type="text" name="vzid" placeholder="Enter your Vz Id" onclick="onFoucsTextField(this.name)"></td>
+  <br></tr>
+  <tr>
+   <td>Enter your EID:</td>  <td><input type="text" name="eid" placeholder="Enter your Enterprise Id" onclick="onFoucsTextField(this.name)">
 </td></tr>
 <br> 
 <tr>
