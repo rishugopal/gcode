@@ -1,4 +1,5 @@
 var req;
+var active;
 function onFoucsTextField(name)
 {
 	if(window.XMLHttpRequest)
@@ -9,7 +10,9 @@ function onFoucsTextField(name)
 		{
 		req=new ActiveXObject("Microsoft.XMLHTTP");
 		}
+	//active=document.activeElement.name;
 	var url="SuggestServlet?name="+name;
+	
 	req.onreadystatechange=getResponse;
 	req.open("GET",url,true);
 	req.send(null);
