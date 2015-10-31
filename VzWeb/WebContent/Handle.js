@@ -16,7 +16,12 @@ $(document).ready(function(){
       	    }}
       	  };*/
 		
-		var url=onFoucsTextField(this.id);
+		/*var url=onFoucsTextField(this.id);*/
+		var getProperty = function (propertyName) {
+		    return obj[propertyName];
+		};
+
+		url=getProperty(this.id);
 		console.log(url);
 		
 	if(url!=null && url!="NoResource"){
