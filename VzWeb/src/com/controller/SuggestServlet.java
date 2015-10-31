@@ -27,19 +27,21 @@ public class SuggestServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		
-    	response.getWriter().append("Served at: ").append(request.getContextPath());
     	
     	System.out.println("servlet");
     	try
     	{
     		response.setContentType("text/html;charset=UTF-8");
     		PrintWriter out=response.getWriter();
-    		
     		String field_name=request.getParameter("name");
-    		System.out.println(field_name);
+    		System.out.println("field name:"+field_name);
     		//call the method that gives link for the respective field
     		String link=new ConfigReader().returnVideoURL(field_name);
-    		System.out.println(link);
+    		System.out.println("link is"+ link);
+    	String link1="<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/Esrckega-6U\" frameborder=\"0\" allowfullscreen></iframe>";
+    	String dialog="<div id=\"dialog-confirm\" title=\"Do you need help?\"></div>";	
+    	//System.out.println(dialog);
+    		//out.println(dialog);
     		out.println(link);
     		
     	}

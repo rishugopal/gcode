@@ -26,6 +26,7 @@ public class ConfigReader {
 	 
 	        // Try loading properties from the file (if found)
 	        props.load( is );
+	        is.close();
 	    }
 	    catch ( Exception e ) { 
 	    	

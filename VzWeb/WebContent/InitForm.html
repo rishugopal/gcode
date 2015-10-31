@@ -3,27 +3,29 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
-<script src="Handle.js">
-function common()
-{
-	var name=document.activeElement.name;
-	
-	}
-</script>
-
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script  src="resource.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script src="script.js"></script>
+ <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+ <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <!-- <link rel="stylesheet" href="runnable.css" /> -->
+  <script  src="Handle.js"></script>
 </head>
 <body>
-
+<div id="dialog-confirm" title="Do you need help?">
+</div>
 <center>Welcome to VZ ordering </center>
 <Form>
 <table><tr>
 <td>Enter your VZID:</td>
-  <td><input type="text" name="vzid" placeholder="Enter your Vz Id" onclick="onFoucsTextField(this.name)"></td>
-  <br></tr>
+  <td><input id="temp" type="text" name="vzid" placeholder="Enter your Vz Id" ></td>
+ </tr>
   <tr>
-   <td>Enter your EID:</td>  <td><input type="text" name="eid" placeholder="Enter your Enterprise Id" onclick="onFoucsTextField(this.name)">
+   <td>Enter your EID:</td>  <td><input id="temp2" type="text" name="eid" placeholder="Enter your Enterprise Id" onclick="onFoucsTextField(this.name)">
 </td></tr>
-<br> 
+ 
 <tr>
 
 <td>Enter the Product ID:</td>
@@ -56,9 +58,29 @@ function common()
 <div id="product_suggest">
 
 </div>
-<input type="submit" value="submit">
+<input id=submit type="submit" value="submit">
 </Form>
-
-
+<!-- <div class="overlaybg"> </div>
+<div class="wrapper"> 
+  Section Start
+  <div class="youtubeV">
+    <div class="guideBox">
+      <div class="videoThum"> <a href="javascript:;"  rel="http://www.youtube.com/embed/GNb8T5NBdQg?list=PL6B08BAA57B5C7810" class="youTubeVideo" ></a></div>
+      <div class="videoInfo">
+        <h2>Youtube Video 1 </h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Uuismod fgrtyert osw laoreet yuore kiolp aliquam erat volutpat.  Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Uuismod fgrtyert osw laoreet yuore kiolp aliquam erat volutpat. </p>
+      </div>
+    </div>
+    </div>
+    </div>
+    <div class="popup youtube"> <a class="close" href="javascript:;" >X</a>
+  <div class="video-container">
+    <div class="iframe">
+      <h2></h2>
+      <iframe width="560" height="315" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+  </div>
+</div> 
+<div id="dialog-confirm" title="Do you need help?"></div>-->
 </body>
 </html>
